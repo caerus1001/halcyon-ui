@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../../models/game';
 import { GameService } from 'src/app/services/game.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-games',
@@ -11,14 +12,17 @@ export class GamesComponent implements OnInit {
   games: Game[];
 
   constructor(private gameService: GameService) { 
-    this.games = this.getGames();
   }
 
   ngOnInit() {
-
+    this.getGames();
   }
 
-  getGames(): Game[] {
-    return null;
+  getGames(): void {
+    this.gameService.getGames().subscribe(games => this.games = games);
+  }
+
+  getGame(id: number): Observable<Game> {
+    return this.gameService.getGame(id);
   }
 }

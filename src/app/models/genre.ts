@@ -1,3 +1,5 @@
 export class Genre {
-    name: string;
+    constructor(private name: string) {
+        
+    }
 }

@@ -1,1 +1,3 @@
-z
+export class Rating {
+    
+}

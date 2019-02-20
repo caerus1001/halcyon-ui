@@ -1,1 +1,14 @@
-<mat-toolbar>My App</mat-toolbar>
+<mat-toolbar>
+    <div>
+        <a routerLink="/">halycon</a>
+        <mat-menu #appMenu="matMenu">
+            <a mat-menu-item>PC</a>
+            <a mat-menu-item>Xbox One</a>
+            <a mat-menu-item>PS4</a>
+            <a mat-menu-item routerLink="/games">All Games</a>
+        </mat-menu>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            Games
+        </button>
+    </div>
+</mat-toolbar>

@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'games', component: GamesComponent,
   },
   {
-    path: 'games/game/:id', component: GameComponent
+    path: 'game/:id', component: GameComponent
   },
   {
     path: 'reviews', component: ReviewsComponent
@@ -17,6 +17,9 @@ const routes: Routes = [
 ]
 
 @NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
   exports: [
     RouterModule
   ]
