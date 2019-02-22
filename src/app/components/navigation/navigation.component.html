@@ -2,10 +2,9 @@
     <div>
         <a routerLink="/">halycon</a>
         <mat-menu #appMenu="matMenu">
-            <a mat-menu-item>PC</a>
-            <a mat-menu-item>Xbox One</a>
-            <a mat-menu-item>PS4</a>
-            <a mat-menu-item routerLink="/games">All Games</a>
+            <a mat-menu-item routerLink="/games/PC">PC</a>
+            <a mat-menu-item routerLink="/games/PS4">Playstation 4</a>
+            <a mat-menu-item routerLink="/games/XOne">Xbox One</a>
         </mat-menu>
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
             Games

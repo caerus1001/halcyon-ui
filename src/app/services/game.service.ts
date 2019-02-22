@@ -14,20 +14,21 @@ export class GameService {
   constructor(private http: HttpClient, private logger: NGXLogger) { }
 
   getGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.gamesUrl).pipe(tap(_ => this.log('fetched all games')), 
+    return this.http.get<Game[]>(this.gamesUrl).pipe(tap(_ => this.logger.info('fetched all games')), 
     catchError(this.handleError('getGames', [])));
   }
 
+  /*getGamesByPlatform(platformName: string): Observable<Game[]> {
+    return this.http.get<Game[]>(`${this.gamesUrl}/${platformName}`)
+    .pipe(tap(_ => this.logger.info(`fetched games for platform ${platformName}`)), catchError(this.handleError('getGamesByPlatform', [])));
+  }*/
+
   getGame(id: number): Observable<Game> {
     const url: string = (`${this.gamesUrl}/${id}`);
-    return this.http.get<Game>(url).pipe(tap(_ => this.logger.debug(`fetched game id=${id}`)), catchError(this.handleError<Game>(`getGame id=${id}`)));
+    return this.http.get<Game>(url).pipe(tap(_ => this.logger.info(`fetched game id=${id}`)), catchError(this.handleError<Game>(`getGame id=${id}`)));
   }
 
-  log (operation: string) {
-    console.log(operation);
-  }
-
-    /**
+  /**
    * Handle Http operation that failed.
    * Let the app continue.
    * @param operation - name of the operation that failed

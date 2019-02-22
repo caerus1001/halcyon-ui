@@ -14,6 +14,7 @@ import { MaterialModule } from './material.module';
 import { GameComponent } from '../components/game/game.component';
 import { ReviewsComponent } from '../components/reviews/reviews.component';
 import { ReviewComponent } from '../components/review/review.component';
+import { GamesByPlatformComponent } from '../components/games-by-platform/games-by-platform.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { ReviewComponent } from '../components/review/review.component';
     GameComponent,
     ReviewsComponent,
     ReviewComponent,
+    GamesByPlatformComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
