@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GameService } from 'src/app/services/game.service';
-import { Game } from 'src/app/models/Game';
+import { Game } from 'src/app/models/game';
 
 @Component({
   selector: 'app-game',

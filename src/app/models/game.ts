@@ -5,14 +5,10 @@ import { identifierModuleUrl } from '@angular/compiler';
 
 export class Game {
     constructor(
-        private id: number, 
-        private title: string,
-        private genre: Genre,
-        private platfroms: Platform[]
+        public id: number, 
+        public title: string,
+        public genre: string,
+        public platforms: string[]
         ) {
-    }
-
-    getId(): number {
-        return this.id;
     }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GameService } from 'src/app/services/game.service';
 import { Game } from 'src/app/models/game';
 import { ActivatedRoute } from '@angular/router';
-
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-games-by-platform',
@@ -12,14 +12,16 @@ import { ActivatedRoute } from '@angular/router';
 export class GamesByPlatformComponent implements OnInit {
   gamesByPlatform: Game[];
 
-  constructor(private route: ActivatedRoute, public gameService: GameService) { }
-
-  ngOnInit() {
-    //this.getGamesByPlatform();
+  constructor(private route: ActivatedRoute, public gameService: GameService) { 
   }
 
-  /*getGamesByPlatform(): void {
-    const platformName = this.route.snapshot.paramMap.get('platformName');
-    this.gameService.getGamesByPlatform(platformName).subscribe(gamesByPlatform => this.gamesByPlatform = gamesByPlatform);
-  }*/
+  ngOnInit() {
+    this.route.params.forEach(params => {
+      this.getGamesByPlatform(params['platformName'])});
+  }
+
+  getGamesByPlatform(platformName: string): void {
+    this.gameService.getGames().pipe(
+      map(games => games.filter(game => game.platforms.includes(platformName)))).subscribe(games => this.gamesByPlatform = games);
+  }
 }

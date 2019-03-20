@@ -4,8 +4,12 @@ import { GamesComponent } from '../components/games/games.component';
 import { ReviewsComponent } from '../components/reviews/reviews.component';
 import { GameComponent } from '../components/game/game.component';
 import { GamesByPlatformComponent } from '../components/games-by-platform/games-by-platform.component';
+import { HomeComponent } from '../components/home/home.component';
 
 const routes: Routes = [
+  {
+    path: '', component: HomeComponent
+  },
   { 
     path: 'games', component: GamesComponent
   },
