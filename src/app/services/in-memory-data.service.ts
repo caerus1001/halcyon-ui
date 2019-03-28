@@ -10,11 +10,14 @@ import { Platform } from '../models/platform';;
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
      const games = [
-      {id: 1, title: 'Resident Evil 2', releaseDate: '01/25/2019', genre: 'Horror', platforms: ['PS4', 'XOne', 'PC']},
-      {id: 2, title: 'Rimworld', releaseDate: '04/12/2018', genre: 'Simulation', platforms: ['PC']},
-      {id: 3, title: 'Witcher 3', releaseDate: '11/01/2017', genre: 'RPG', platforms: ['PS4', 'XOne', 'PC']},
-      {id: 4, title: 'God of War', releaseDate: '08/02/2017', genre: 'Action/Adventure', platforms: ['PS4']},
-      {id: 5, title: 'Halo 4', releaseDate: '07/24/2016', genre: 'Action/Adventure', platforms: ["XOne'"]}
+      {id: 1, title: 'Resident Evil 2', releaseDate: '01/25/2019', genre: 'Horror', platforms: ['PS4', 'XOne', 'PC'], publisher: 'Capcom'},
+      {id: 2, title: 'Rimworld', releaseDate: '04/12/2018', genre: 'Simulation', platforms: ['PC'], publisher: 'Ludeon Studios'},
+      {id: 3, title: 'Witcher 3', releaseDate: '11/01/2017', genre: 'RPG', platforms: ['PS4', 'XOne', 'PC'], publisher: 'Projekt RED'},
+      {id: 4, title: 'God of War', releaseDate: '08/02/2017', genre: 'Action/Adventure', platforms: ['PS4'], publisher: 'Sony Interactive Entertainment'},
+      {id: 5, title: 'Halo 4', releaseDate: '07/24/2016', genre: 'Action/Adventure', platforms: ['XOne'], publisher: '343 Industries'},
+      {id: 6, title: 'Dark Souls III', releaseDate: '02/20/2016', genre: 'RPG', platforms: ['PS4', 'XOne', 'PC'], publisher: 'From Software'},
+      {id: 7, title: 'Horizon Zero Dawn', releaseDate: '02/28/2017', genre: 'RPG', platforms: ['PS4'], publisher: 'Guerilla Games'},
+      {id: 8, title: 'Gears of War 4', releaseDate: '10/11/2016', genre: 'TPS', platforms: ['XOne'], publisher: 'The Coalition'}
     ];
     return {games};
   }
