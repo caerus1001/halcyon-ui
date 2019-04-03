@@ -1,4 +1,38 @@
-.card {
-    width: calc(100% - 50px);
-    height: calc(100% - 50px);
+.mat-grid-list {
+    margin-top: 10px;
+}
+
+.mat-card {
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-container {
+    width: 100%;
+}
+
+.game-image {
+    margin-top: -5px;
+    width: 100%;
+}
+
+.mat-card-title {
+    height: 2.2em;
+    line-height: 1.1em;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.mat-card-subtitle {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.mat-card > .mat-card-actions:last-child {
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+.quick-button {
+   width: 50%;
 }

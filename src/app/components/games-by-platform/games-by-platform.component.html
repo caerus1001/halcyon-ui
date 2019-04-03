@@ -1,15 +1,16 @@
-<div>
-  <mat-grid-list cols="8" rowHeight="600px">
-    <div *ngFor="let game of gamesByPlatform">
-      <mat-grid-tile colspan="1" rowspan="1">
-        <mat-card class="card">
-          <mat-card-title>{{game.title}}</mat-card-title>
-          <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
-          <img mat-card-image src="../../assets/images/resident_evil_2.jpg">
-          <mat-card-content>This is the game description</mat-card-content>
-          <mat-card-actions>Actions</mat-card-actions>
-        </mat-card>
+  <mat-grid-list cols="8" rowHeight="415px">
+      <mat-grid-tile colspan="1" rowspan="1" [style.background]="'green'"
+        *ngFor="let game of gamesByPlatform">
+        <div class="card-container">
+          <mat-card>
+            <mat-card-title>{{game.title}}</mat-card-title>
+            <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
+            <img class="game-image" src="../../assets/images/resident_evil_2.jpg">
+            <mat-card-actions>
+              <button class="quick-button">Rate</button>
+              <button class="quick-button">Review</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
       </mat-grid-tile>
-    </div>
   </mat-grid-list>
-</div>

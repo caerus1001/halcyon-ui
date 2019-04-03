@@ -17,7 +17,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 5, title: 'Halo 4', releaseDate: '07/24/2016', genre: 'Action/Adventure', platforms: ['XOne'], publisher: '343 Industries'},
       {id: 6, title: 'Dark Souls III', releaseDate: '02/20/2016', genre: 'RPG', platforms: ['PS4', 'XOne', 'PC'], publisher: 'From Software'},
       {id: 7, title: 'Horizon Zero Dawn', releaseDate: '02/28/2017', genre: 'RPG', platforms: ['PS4'], publisher: 'Guerilla Games'},
-      {id: 8, title: 'Gears of War 4', releaseDate: '10/11/2016', genre: 'TPS', platforms: ['XOne'], publisher: 'The Coalition'}
+      {id: 8, title: 'Gears of War 4', releaseDate: '10/11/2016', genre: 'TPS', platforms: ['XOne'], publisher: 'The Coalition'},
+      {id: 9, title: 'Player Unknown\'s Battlegrounds', releaseDate: '06/13/2017', genre: 'Battle Royale', platforms: ['PS4', 'XOne', 'PC'], publisher: 'BlueHole'}
     ];
     return {games};
   }
