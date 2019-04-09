@@ -1,5 +1,5 @@
   <mat-grid-list cols="8" rowHeight="415px">
-      <mat-grid-tile colspan="1" rowspan="1" [style.background]="'green'"
+      <mat-grid-tile colspan="1" rowspan="1" [style.background]="'gray'"
         *ngFor="let game of gamesByPlatform">
         <div class="card-container">
           <mat-card>
@@ -7,8 +7,10 @@
             <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
             <img class="game-image" src="../../assets/images/resident_evil_2.jpg">
             <mat-card-actions>
-              <button class="quick-button">Rate</button>
-              <button class="quick-button">Review</button>
+              <button class="quick-button" mat-stroked-button>Rate</button>
+              <button class="quick-button" mat-icon-button>
+                <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+              </button>
             </mat-card-actions>
           </mat-card>
       </div>
