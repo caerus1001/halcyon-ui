@@ -15,6 +15,7 @@ import { GameComponent } from '../components/game/game.component';
 import { ReviewsComponent } from '../components/reviews/reviews.component';
 import { ReviewComponent } from '../components/review/review.component';
 import { GamesByPlatformComponent } from '../components/games-by-platform/games-by-platform.component';
+import { QuickScoreModalComponent } from '../quick-score-modal/quick-score-modal.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { GamesByPlatformComponent } from '../components/games-by-platform/games-
     LoggerModule.forRoot({serverLoggingUrl: 'api/logs', level: NgxLoggerLevel.DEBUG}),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})
   ],
+  entryComponents: [GamesByPlatformComponent, QuickScoreModalComponent],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -34,6 +36,7 @@ import { GamesByPlatformComponent } from '../components/games-by-platform/games-
     ReviewsComponent,
     ReviewComponent,
     GamesByPlatformComponent,
+    QuickScoreModalComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

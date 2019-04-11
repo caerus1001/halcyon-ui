@@ -1,0 +1,23 @@
+.component-wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.component-slider-wrapper {
+    display: inline-block;
+    width: 50%;
+}
+
+.component-label-wrapper {
+    display: inline-block;
+    width: 50%;
+}
+
+.rate-button-wrapper {
+    width: 100%;
+    align-content: center;
+}
+
+.mat-stroked-button {
+    width: 100%;
+}

@@ -37,12 +37,5 @@
 
 .quick-button {
    width: 50%;
-}
-
-.mat-button-wrapper {
-    text-align: right;
-}
-
-a {
-    text-decoration: none;
+   display: inline-block;
 }
