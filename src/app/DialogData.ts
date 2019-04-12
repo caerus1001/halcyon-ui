@@ -1,4 +1,5 @@
+import { Game } from './models/game';
+
 export interface DialogData {
-    animal: string;
-    name: string;
+    game: Game;
 }

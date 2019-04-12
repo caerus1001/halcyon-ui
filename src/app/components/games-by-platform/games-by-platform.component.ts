@@ -12,9 +12,6 @@ import { QuickScoreModalComponent } from 'src/app/quick-score-modal/quick-score-
   styleUrls: ['./games-by-platform.component.css']
 })
 export class GamesByPlatformComponent implements OnInit {
-  animal: string;
-  name: string;
-
   gamesByPlatform: Game[];
 
   constructor(private route: ActivatedRoute, public gameService: GameService, public dialog: MatDialog) { 
@@ -30,15 +27,10 @@ export class GamesByPlatformComponent implements OnInit {
       map(games => games.filter(game => game.platforms.includes(platformName)))).subscribe(games => this.gamesByPlatform = games);
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(QuickScoreModalComponent, {
-      width: '300px',
-      data: {name: this.name, animal: this.animal}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+  openDialog(game: Game): void {
+    this.dialog.open(QuickScoreModalComponent, {
+      width: '450px',
+      data: {game: game}
     });
   }
 }

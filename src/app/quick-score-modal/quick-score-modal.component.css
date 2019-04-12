@@ -5,12 +5,12 @@
 
 .component-slider-wrapper {
     display: inline-block;
-    width: 50%;
+    width: 75%;
 }
 
 .component-label-wrapper {
     display: inline-block;
-    width: 50%;
+    width: 25%;
 }
 
 .rate-button-wrapper {
@@ -20,4 +20,22 @@
 
 .mat-stroked-button {
     width: 100%;
+}
+
+.mat-slider {
+    width: 100%;
+}
+
+.button-wrapper {
+    width: 100%;
+}
+
+.cancel-button-wrapper {
+    display: inline-block;
+    width: 50%;
+}
+
+.rate-button-wrapper {
+    display: inline-block;
+    width: 50%;
 }

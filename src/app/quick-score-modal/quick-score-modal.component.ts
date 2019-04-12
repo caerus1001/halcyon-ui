@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog, MatSnackBar } from '@angular/material';
 import { DialogData } from '../DialogData';
+import { Game } from '../models/game';
 
 @Component({
   selector: 'app-quick-score-modal',
@@ -9,12 +10,21 @@ import { DialogData } from '../DialogData';
 })
 export class QuickScoreModalComponent {
   components: string[];
+  test: number;
+  game: Game;
 
-  constructor(public dialogRef: MatDialogRef<QuickScoreModalComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData) {
-    this.components = ['Graphics', 'Gameplay', 'Sound'];
+  rate(graphics: number, gameplay: number, sound: number): void {
+    // TODO: Make a post call to API to rate game with user id.
+    this.dialogRef.close();
+    console.log(`Here is log: ${this.game.title} - ${graphics} - ${gameplay} - ${sound}`);
+    this.displaySnackBar();
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  displaySnackBar() : void {
+    this.snackBar.open('Thanks for the rating!', 'Close', {duration: 2000});
+  }
+
+  constructor(public dialogRef: MatDialogRef<QuickScoreModalComponent>, @Inject(MAT_DIALOG_DATA) public data: DialogData, private snackBar: MatSnackBar) {
+    this.game = data.game;
   }
 }
