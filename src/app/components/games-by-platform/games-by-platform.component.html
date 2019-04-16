@@ -1,14 +1,16 @@
-<mat-grid-list cols="8" rowHeight="415px">
+<mat-grid-list cols="8" rowHeight="428px">
   <mat-grid-tile colspan="1" rowspan="1" [style.background]="'gray'"
     *ngFor="let game of gamesByPlatform">
     <div class="card-container">
       <mat-card>
-        <mat-card-title>{{game.title}}</mat-card-title>
-        <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
-        <img class="game-image" src="../../assets/images/resident_evil_2.jpg">
+        <a routerLink='/game/{{game.id}}'>
+          <mat-card-title>{{game.title}}</mat-card-title>
+          <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
+          <img class="game-image" src="../../assets/images/resident_evil_2.jpg">
+        </a>
         <mat-card-actions>
           <button class="quick-button" mat-stroked-button>+ Follow</button>
-          <button class="quick-button" mat-stroked-button (click)="openDialog(game)">9.8</button>
+          <button class="quick-button" mat-stroked-button (click)="openDialog(game)">{{game.score}}</button>
         </mat-card-actions>
       </mat-card>
   </div>

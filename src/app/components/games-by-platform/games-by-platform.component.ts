@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
 import { QuickScoreModalComponent } from 'src/app/quick-score-modal/quick-score-modal.component';
+import { GameScoreService } from 'src/app/game-score.service';
 
 @Component({
   selector: 'app-games-by-platform',

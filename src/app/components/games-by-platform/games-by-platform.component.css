@@ -3,8 +3,10 @@
 }
 
 .mat-card {
-    margin: 10px;
     padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: -10px;
 }
 
 .card-container {
@@ -26,11 +28,6 @@
     font-size: 12px;
 }
 
-.mat-card {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 .mat-card > .mat-card-actions:last-child {
     margin: 0px 0px 0px 0px;
 }
@@ -38,4 +35,8 @@
 .quick-button {
    width: 50%;
    display: inline-block;
+}
+
+a {
+    text-decoration: none;
 }
