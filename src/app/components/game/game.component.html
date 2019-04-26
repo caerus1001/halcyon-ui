@@ -1,4 +1,17 @@
-<div *ngIf="game">
-  <h1>{{game.title}}</h1>
-  <h2>{{game.releaseDate}}</h2>
+<div class="dashboard">
+  <div class="title"><h2>{{game.title}}</h2></div>
+  <div class="sub-title"><h4>{{game.publisher}}</h4></div>
+</div>
+
+<app-game-rating-bar></app-game-rating-bar>
+
+<div class="game-tab">
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Overview"> Content 3 </mat-tab>
+    <mat-tab label="Review"> Content 1 </mat-tab>
+    <mat-tab label="News"> Content 2 </mat-tab>
+    <mat-tab label="Images"> Content 3 </mat-tab>
+    <mat-tab label="Videos"> Content 3 </mat-tab>
+    <mat-tab label="Forum"> Content 3 </mat-tab>
+  </mat-tab-group>
 </div>

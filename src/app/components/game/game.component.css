@@ -1,0 +1,17 @@
+.game-tab {
+    margin: auto;
+    width: 100%;
+}
+
+.title {
+    display: inline-block;
+}
+
+.sub-title { 
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.mat-progress-bar:hover {
+    height: 40px;
+}
