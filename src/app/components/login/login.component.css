@@ -1,0 +1,42 @@
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -260px;
+  background-color: whitesmoke;
+  padding: 10px 30px 10px 30px;
+  box-shadow: 0px 3px 5px grey;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.signup-button {
+  width: 100%;
+}
+
+.mat-button {
+  width: 100%;
+  background-color: #8f4dca;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.signup-title-container {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 25px;
+}

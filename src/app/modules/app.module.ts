@@ -17,6 +17,7 @@ import { ReviewComponent } from '../components/review/review.component';
 import { GamesByPlatformComponent } from '../components/games-by-platform/games-by-platform.component';
 import { QuickScoreModalComponent } from '../quick-score-modal/quick-score-modal.component';
 import { GameRatingBarComponent } from '../game-rating-bar/game-rating-bar.component';
+import { LoginComponent } from '../components/login/login.component';
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { GameRatingBarComponent } from '../game-rating-bar/game-rating-bar.compo
     ReviewComponent,
     GamesByPlatformComponent,
     QuickScoreModalComponent,
-    GameRatingBarComponent
+    GameRatingBarComponent,
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
