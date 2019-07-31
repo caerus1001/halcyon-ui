@@ -1,6 +1,6 @@
 <mat-toolbar>
   <div>
-    <a routerLink="/">halycon</a>
+    <a class="halcyon-home-link" routerLink="/">halycon</a>
     <mat-menu #appMenu="matMenu">
       <a mat-menu-item routerLink="/games/PC">PC</a>
       <a mat-menu-item routerLink="/games/PS4">Playstation 4</a>
@@ -9,8 +9,17 @@
     <button mat-button [matMenuTriggerFor]="appMenu">
       Games
     </button>
-    <div class="login-container">
-      <a routerLink="/login">Login</a>
+    <mat-menu #reviewMenu="matMenu">
+      <a mat-menu-item routerLink="reviews/games">Games</a>
+      <a mat-menu-item routerLink="/reviews/movies">Movies</a>
+      <a mat-menu-item routerLink="/reviews/comics">Comics</a>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="reviewMenu">
+      Reviews
+    </button>
+    <div class="signup-login-container">
+        <a class="signup-link" routerLink="/signup">Sign Up</a>
+        <a class="login-link" routerLink="/login">Login</a>
     </div>
   </div>
 </mat-toolbar>

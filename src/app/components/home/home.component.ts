@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  favoriteFood: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  displayFood(): void {
+    console.log(`favorite food: ${this.favoriteFood} right here!!!`);
+  }
 }

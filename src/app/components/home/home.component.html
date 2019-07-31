@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input name="test" [(ngModel)]="favoriteFood" matInput placeholder="Favorite food">
+  </mat-form-field>
+</form>
+<button (click)="displayFood()">Click Me!</button>
+<h1>{{favoriteFood}}</h1>

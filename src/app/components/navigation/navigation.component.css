@@ -1,5 +1,33 @@
-.login-container {
+.signup-login-container {
   display: inline-block;
-  right: 15px;
   position: absolute;
+  margin-top: 5px;
+  right: 15px;
+}
+
+.signup-link {
+  padding-right: 5px;
+}
+
+.login-link {
+  padding-left: 5px;
+}
+
+.halcyon-home-link {
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+a, a:visited, a:active {
+  color: #363a59;
+  text-decoration: none;
+}
+
+.mat-menu-item {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+.mat-toolbar {
+  height: 40px;
 }

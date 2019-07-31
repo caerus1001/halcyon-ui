@@ -1,17 +1,25 @@
 .game-tab {
-    margin: auto;
-    width: 100%;
+  margin: auto;
+  width: 100%;
 }
 
 .title {
-    display: inline-block;
+  display: inline-block;
+  margin: 20px 5px 20px 15px;
 }
 
-.sub-title { 
-    margin-left: 10px;
-    display: inline-block;
+.sub-title {
+  margin-left: 5px;
+  display: inline-block;
 }
 
 .mat-progress-bar:hover {
-    height: 40px;
+  height: 40px;
+}
+
+.title-span {
+  font-size: 25px;
+}
+
+.publisher-span {
 }

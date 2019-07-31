@@ -18,6 +18,8 @@ import { GamesByPlatformComponent } from '../components/games-by-platform/games-
 import { QuickScoreModalComponent } from '../quick-score-modal/quick-score-modal.component';
 import { GameRatingBarComponent } from '../game-rating-bar/game-rating-bar.component';
 import { LoginComponent } from '../components/login/login.component';
+import { SignupComponent } from '../components/signup/signup.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -26,7 +28,8 @@ import { LoginComponent } from '../components/login/login.component';
     MaterialModule,
     HttpClientModule,
     LoggerModule.forRoot({serverLoggingUrl: 'api/logs', level: NgxLoggerLevel.DEBUG}),
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
+    FormsModule
   ],
   entryComponents: [GamesByPlatformComponent, QuickScoreModalComponent],
   declarations: [
@@ -40,7 +43,8 @@ import { LoginComponent } from '../components/login/login.component';
     GamesByPlatformComponent,
     QuickScoreModalComponent,
     GameRatingBarComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
