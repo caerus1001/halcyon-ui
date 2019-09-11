@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from '../services/in-memory-data.service';
 import { AppComponent } from '../components/app/app.component';
 import { HomeComponent } from '../components/home/home.component';
 import { NavigationComponent } from '../components/navigation/navigation.component';
@@ -28,7 +26,6 @@ import {FormsModule} from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     LoggerModule.forRoot({serverLoggingUrl: 'api/logs', level: NgxLoggerLevel.DEBUG}),
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
     FormsModule
   ],
   entryComponents: [GamesByPlatformComponent, QuickScoreModalComponent],

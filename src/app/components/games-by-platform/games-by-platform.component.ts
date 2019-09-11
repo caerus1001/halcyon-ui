@@ -15,7 +15,7 @@ import { GameScoreService } from 'src/app/game-score.service';
 export class GamesByPlatformComponent implements OnInit {
   gamesByPlatform: Game[];
 
-  constructor(private route: ActivatedRoute, public gameService: GameService, public dialog: MatDialog) { 
+  constructor(private route: ActivatedRoute, public gameService: GameService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -24,8 +24,7 @@ export class GamesByPlatformComponent implements OnInit {
   }
 
   getGamesByPlatform(platformName: string): void {
-    this.gameService.getGames().pipe(
-      map(games => games.filter(game => game.platforms.includes(platformName)))).subscribe(games => this.gamesByPlatform = games);
+    this.gameService.getGamesByPlatform(platformName).subscribe(gamesByPlatform => this.gamesByPlatform = gamesByPlatform);
   }
 
   openDialog(game: Game): void {

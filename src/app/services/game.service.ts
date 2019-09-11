@@ -9,12 +9,14 @@ import { NGXLogger } from 'ngx-logger';
   providedIn: 'root'
 })
 export class GameService {
-  private gamesUrl: string = 'api/games';
+  private baseContext: string = 'http://localhost:8080/api';
+  private gamesByPlatformUrl: string = '/games/platforms/';
+  private gamesUrl: string = '/gamesByCurrentDate';
 
   constructor(private http: HttpClient, private logger: NGXLogger) { }
 
-  getGames(): Observable<Game[]> {
-    return this.http.get<Game[]>(this.gamesUrl).pipe(tap(_ => this.logger.info('fetched all games')), 
+  getGamesByPlatform(platformName: string): Observable<Game[]> {
+    return this.http.get<Game[]>(this.baseContext + this.gamesByPlatformUrl + platformName).pipe(tap(_ => this.logger.info('fetched all games')),
     catchError(this.handleError('getGames', [])));
   }
 
@@ -28,15 +30,12 @@ export class GameService {
     return this.http.get<Game>(url).pipe(tap(_ => this.logger.info(`fetched game id=${id}`)), catchError(this.handleError<Game>(`getGame id=${id}`)));
   }
 
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
+  getGamesByCurrentDate(): Observable<Game[]> {
+    return this.http.get<Game[]>(this.baseContext + this.gamesUrl).pipe(tap(_=> this.logger.info(`fetched gamesByCurrentDate`)), catchError(this.handleError<Game[]>(`getGamesByCurrentDate`)));
+  }
+
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
- 
       console.error(error); // log to console instead
       this.logger.debug(`${operation} failed: ${error.message}`);
       return of(result as T);

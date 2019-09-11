@@ -18,7 +18,7 @@ export class QuickScoreModalComponent {
     // TODO: Make a post call to API to rate game with user id.
     this.dialogRef.close();
     this.gameScoreService.postGameScore(this.game.id);
-    console.log(`Here is log: ${this.game.title} - ${graphics} - ${gameplay} - ${sound}`);
+    console.log(`Here is log: ${this.game.name} - ${graphics} - ${gameplay} - ${sound}`);
     this.displaySnackBar();
   }
 
