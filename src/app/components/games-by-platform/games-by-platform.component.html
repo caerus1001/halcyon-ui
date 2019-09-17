@@ -5,8 +5,8 @@
       <mat-card>
         <a routerLink='/game/{{game.id}}'>
           <mat-card-title>{{game.name}}</mat-card-title>
-          <mat-card-subtitle>{{game.publisher}}</mat-card-subtitle>
-          <img class="game-image" src="../../assets/images/resident_evil_2.jpg">
+          <!--<mat-card-subtitle>{{game.publishers}}</mat-card-subtitle>-->
+          <img class="game-image" src="{{game.image.original_url}}">
         </a>
         <mat-card-actions>
           <button class="quick-button" mat-stroked-button>+ Follow</button>

@@ -11,6 +11,6 @@ export class Game {
     public genres: Genre[],
     public releaseDate: string,
     public image: Image,
-    public publisher: Publisher[]) {
+    public publishers: Publisher[]) {
   }
 }

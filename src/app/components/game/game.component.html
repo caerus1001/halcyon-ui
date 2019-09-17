@@ -1,6 +1,10 @@
-<div class="dashboard">
-  <div class="title"><span class="title-span">{{game.name}}</span></div>
-  <div class="sub-title"><span class="publisher-span">{{game.publisher}}</span></div>
+<div *ngIf="game" class="dashboard">
+  <img class="game-image" src="{{game.image.original_url}}">
+  <div class="title-sub-title-container">
+    <span class="title-span">{{game.name}}</span>
+    <span class="publisher-span" *ngFor="let publisher of game.publishers">{{publisher.name}}</span>
+    <span class="release-date-span">{{game.releaseDate}}</span>
+  </div>
 </div>
 
 <app-game-rating-bar></app-game-rating-bar>

@@ -3,23 +3,27 @@
   width: 100%;
 }
 
-.title {
-  display: inline-block;
-  margin: 20px 5px 20px 15px;
-}
-
-.sub-title {
-  margin-left: 5px;
-  display: inline-block;
-}
-
 .mat-progress-bar:hover {
   height: 40px;
 }
 
 .title-span {
-  font-size: 25px;
+  font-size: 100px;
+  display: block;
 }
 
 .publisher-span {
+  font-size: 50px;
+  display: block;
+  margin-left: 5px;
+}
+
+.game-image {
+  width: 250px;
+}
+
+.title-sub-title-container {
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
 }

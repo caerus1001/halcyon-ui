@@ -15,12 +15,13 @@ const httpOptions = {
 })
 
 export class GameScoreService {
-  private gameScoreUrl: 'api/gameScore';
+  private baseContext: string = 'http://localhost:8080/api';
+  private gameScoreUrl: string = '/gameScore';
 
   constructor(private http: HttpClient, private logger: NGXLogger) { }
 
   getGameScore(id: number): Observable<number> {
-    const url: string = `${this.gameScoreUrl}/${id}`;
+    const url: string = `${this.baseContext}${this.gameScoreUrl}/${id}`;
     return this.http.get<number>(url).pipe(tap(_ => this.logger.info(`fetched game score for ${id}`)), catchError(this.handleError<number>(`get game score=${id}`)));
   }
 
@@ -37,7 +38,7 @@ export class GameScoreService {
    */
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
- 
+
       console.error(error); // log to console instead
       this.logger.debug(`${operation} failed: ${error.message}`);
       return of(result as T);

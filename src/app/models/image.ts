@@ -8,9 +8,13 @@ export class Image {
     public superUrl: string,
     public thumbUrl: string,
     public tinyUrl: string,
-    public originalUrl: string,
+    public original_url: string,
     public imageTags: string
   ) {
 
+  }
+
+  getOriginalUrl(): string {
+   return this.original_url;
   }
 }

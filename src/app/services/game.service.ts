@@ -11,7 +11,7 @@ import { NGXLogger } from 'ngx-logger';
 export class GameService {
   private baseContext: string = 'http://localhost:8080/api';
   private gamesByPlatformUrl: string = '/games/platforms/';
-  private gamesUrl: string = '/gamesByCurrentDate';
+  private gamesUrl: string = '/game';
 
   constructor(private http: HttpClient, private logger: NGXLogger) { }
 
@@ -26,7 +26,7 @@ export class GameService {
   }*/
 
   getGame(id: number): Observable<Game> {
-    const url: string = `${this.gamesUrl}/${id}`;
+    const url: string = `${this.baseContext}${this.gamesUrl}/${id}`;
     return this.http.get<Game>(url).pipe(tap(_ => this.logger.info(`fetched game id=${id}`)), catchError(this.handleError<Game>(`getGame id=${id}`)));
   }
 
