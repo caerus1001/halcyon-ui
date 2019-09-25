@@ -20,11 +20,6 @@ export class GameService {
     catchError(this.handleError('getGames', [])));
   }
 
-  /*getGamesByPlatform(platformName: string): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.gamesUrl}/${platformName}`)
-    .pipe(tap(_ => this.logger.info(`fetched games for platform ${platformName}`)), catchError(this.handleError('getGamesByPlatform', [])));
-  }*/
-
   getGame(id: number): Observable<Game> {
     const url: string = `${this.baseContext}${this.gamesUrl}/${id}`;
     return this.http.get<Game>(url).pipe(tap(_ => this.logger.info(`fetched game id=${id}`)), catchError(this.handleError<Game>(`getGame id=${id}`)));

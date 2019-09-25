@@ -12,18 +12,55 @@
   display: block;
 }
 
-.publisher-span {
-  font-size: 50px;
-  display: block;
-  margin-left: 5px;
-}
-
 .game-image {
   width: 250px;
+  margin: 10px 0px 10px 10px;
+  box-shadow: 0px 3px 5px grey;
 }
 
 .title-sub-title-container {
   display: inline-block;
   position: absolute;
   margin-left: 10px;
+}
+
+.publisher-container {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.publisher-span {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.platform-container {
+  margin-bottom: 5px;
+}
+
+.platform-span {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.genre-container {
+  margin-bottom: 0;
+}
+
+.genre-span {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.game-description {
+  margin-left: 10px;
+}
+
+.release-date-container {
+  margin-bottom: 5px;
+}
+
+.release-date-span {
+  font-size: 25px;
+  margin-left: 5px;
 }

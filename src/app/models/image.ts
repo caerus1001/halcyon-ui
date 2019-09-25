@@ -8,6 +8,7 @@ export class Image {
     public superUrl: string,
     public thumbUrl: string,
     public tinyUrl: string,
+    public original: string,
     public original_url: string,
     public imageTags: string
   ) {

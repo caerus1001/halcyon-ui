@@ -2,8 +2,34 @@
   <img class="game-image" src="{{game.image.original_url}}">
   <div class="title-sub-title-container">
     <span class="title-span">{{game.name}}</span>
-    <span class="publisher-span" *ngFor="let publisher of game.publishers">{{publisher.name}}</span>
-    <span class="release-date-span">{{game.releaseDate}}</span>
+    <div class="publisher-container">
+      <ng-container *ngFor="let publisher of game.publishers;last as isLast">
+        <ng-container *ngIf="!isLast; else lastItem">
+          <span class="publisher-span">{{publisher.name}},</span>
+        </ng-container>
+        <ng-template #lastItem><span class="publisher-span">{{publisher.name}}</span></ng-template>
+      </ng-container>
+      <span class="release-date-span">{{game.releaseDate}}</span>
+    </div>
+    <div class="platform-container">
+      <ng-container *ngFor="let platform of game.platforms;last as isLast">
+        <ng-container *ngIf="!isLast;else lastItem">
+          <span class="platform-span">{{platform.name}}, </span>
+        </ng-container>
+        <ng-template #lastItem><span class="platform-span">{{platform.name}}</span></ng-template>
+      </ng-container>
+    </div>
+    <div class="genre-container">
+      <ng-container *ngFor="let genre of game.genres;last as isLast">
+        <ng-container *ngIf="!isLast;else lastItem">
+          <span class="platform-span">{{genre.name}}, </span>
+        </ng-container>
+        <ng-template #lastItem><span class="platform-span">{{genre.name}}</span></ng-template>
+      </ng-container>
+    </div>
+    <div class="release-date-container">
+      <span class="release-date-span">Release Date: {{game.expected_release_year}}-{{game.expected_release_month}}-{{game.expected_release_day}}</span>
+    </div>
   </div>
 </div>
 
@@ -11,10 +37,10 @@
 
 <div class="game-tab">
   <mat-tab-group mat-stretch-tabs>
-    <mat-tab label="Overview"> Content 3 </mat-tab>
-    <mat-tab label="Review"> Content 1 </mat-tab>
+    <mat-tab label="Overview"><div class="game-description" [innerHTML]="game.description"></div></mat-tab>
+    <mat-tab label="Review"><div class="reviews" *ngFor="let review of game.reviews">{{review}}</div></mat-tab>
     <mat-tab label="News"> Content 2 </mat-tab>
-    <mat-tab label="Images"> Content 3 </mat-tab>
+    <mat-tab label="Images"><img *ngFor="let image of game.images" src="{{image.original}}"></mat-tab>
     <mat-tab label="Videos"> Content 3 </mat-tab>
     <mat-tab label="Forum"> Content 3 </mat-tab>
   </mat-tab-group>
