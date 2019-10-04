@@ -1,0 +1,11 @@
+.images {
+  margin: 10px auto 10px auto;
+  width: 50vw;
+  display: block;
+}
+
+.image-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

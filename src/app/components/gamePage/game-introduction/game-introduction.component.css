@@ -1,27 +1,20 @@
-.game-tab {
-  margin: auto;
-  width: 100%;
+.game-image {
+  width: 250px;
+  margin: 10px 0px 10px 10px;
+  box-shadow: 0px 3px 5px grey;
+  display: inline-block;
 }
 
-.mat-progress-bar:hover {
-  height: 40px;
+.title-sub-title-container {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  vertical-align: top;
 }
 
 .title-span {
   font-size: 100px;
   display: block;
-}
-
-.game-image {
-  width: 250px;
-  margin: 10px 0px 10px 10px;
-  box-shadow: 0px 3px 5px grey;
-}
-
-.title-sub-title-container {
-  display: inline-block;
-  position: absolute;
-  margin-left: 10px;
 }
 
 .publisher-container {
@@ -31,6 +24,11 @@
 
 .publisher-span {
   font-size: 30px;
+  margin-left: 5px;
+}
+
+.release-date-span {
+  font-size: 25px;
   margin-left: 5px;
 }
 
@@ -52,15 +50,6 @@
   margin-bottom: 5px;
 }
 
-.game-description {
-  margin-left: 10px;
-}
-
 .release-date-container {
   margin-bottom: 5px;
-}
-
-.release-date-span {
-  font-size: 25px;
-  margin-left: 5px;
 }

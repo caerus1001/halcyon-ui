@@ -9,7 +9,7 @@ import { NavigationComponent } from '../components/navigation/navigation.compone
 import { AppRoutingModule } from './app-routing.module';
 import { GamesComponent } from '../components/games/games.component';
 import { MaterialModule } from './material.module';
-import { GameComponent } from '../components/game/game.component';
+import { GameComponent } from '../components/gamePage/game/game.component';
 import { ReviewsComponent } from '../components/reviews/reviews.component';
 import { ReviewComponent } from '../components/review/review.component';
 import { GamesByPlatformComponent } from '../components/games-by-platform/games-by-platform.component';
@@ -18,6 +18,9 @@ import { GameRatingBarComponent } from '../game-rating-bar/game-rating-bar.compo
 import { LoginComponent } from '../components/login/login.component';
 import { SignupComponent } from '../components/signup/signup.component';
 import {FormsModule} from '@angular/forms';
+import { GameTabGroupComponent } from '../components/gamePage/game-tab-group/game-tab-group.component';
+import { GameIntroductionComponent } from '../components/gamePage/game-introduction/game-introduction.component';
+import { GameImagesComponent } from '../components/gamePage/game-images/game-images.component';
 
 @NgModule({
   imports: [
@@ -41,7 +44,10 @@ import {FormsModule} from '@angular/forms';
     QuickScoreModalComponent,
     GameRatingBarComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    GameTabGroupComponent,
+    GameIntroductionComponent,
+    GameImagesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

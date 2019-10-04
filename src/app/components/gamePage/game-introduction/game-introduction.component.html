@@ -1,4 +1,4 @@
-<div *ngIf="game" class="dashboard">
+<div class="game-introduction-container">
   <img class="game-image" src="{{game.image.original_url}}">
   <div class="title-sub-title-container">
     <span class="title-span">{{game.name}}</span>
@@ -31,17 +31,4 @@
       <span class="release-date-span">Release Date: {{game.expected_release_year}}-{{game.expected_release_month}}-{{game.expected_release_day}}</span>
     </div>
   </div>
-</div>
-
-<app-game-rating-bar></app-game-rating-bar>
-
-<div class="game-tab">
-  <mat-tab-group mat-stretch-tabs>
-    <mat-tab label="Overview"><div class="game-description" [innerHTML]="game.description"></div></mat-tab>
-    <mat-tab label="Review"><div class="reviews" *ngFor="let review of game.reviews">{{review}}</div></mat-tab>
-    <mat-tab label="News"> Content 2 </mat-tab>
-    <mat-tab label="Images"><img *ngFor="let image of game.images" src="{{image.original}}"></mat-tab>
-    <mat-tab label="Videos"> Content 3 </mat-tab>
-    <mat-tab label="Forum"> Content 3 </mat-tab>
-  </mat-tab-group>
 </div>
