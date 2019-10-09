@@ -9,3 +9,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.images-container {
+  text-align: center;
+}
+
+.test-image {
+  width: calc(100vw/8);
+  height: 240px;
+  padding: 5px;
+  border-radius: 8px;
+}

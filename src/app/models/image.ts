@@ -1,5 +1,6 @@
 export class Image {
   constructor(
+    public state: string,
     public iconUrl: string,
     public mediumUrl: string,
     public screenUrl: string,
@@ -12,7 +13,6 @@ export class Image {
     public original_url: string,
     public imageTags: string
   ) {
-
   }
 
   getOriginalUrl(): string {

@@ -3,5 +3,10 @@
     <button mat-button disabled="{{isDisabled('left')}}" (click)="previousImage()"><mat-icon aria-hidden="false" aria-label="Left arrow">keyboard_arrow_left</mat-icon></button>
     <button mat-button disabled="{{isDisabled('right')}}" (click)="nextImage()"><mat-icon aria-hidden="false" aria-label="Right arrow">keyboard_arrow_right</mat-icon></button>
   </div>
-  <img class="images" [@gameImageExpansionAnimation]='state' (click)='animateMe()' mode="determinate" src="{{getImage().original}}">
+  <!--<img class="images" [@gameImageExpansionAnimation]='state' (click)='animateMe()' mode="determinate" src="{{getImage().original}}">-->
+  <div class="images-container">
+    <div class="images-container2">
+      <img *ngFor="let image of game.images" class="test-image" (click)="openDialog(image)" src="{{image.original}}">
+    </div>
+  </div>
 </div>

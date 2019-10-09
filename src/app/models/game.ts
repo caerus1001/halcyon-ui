@@ -19,7 +19,7 @@ export class Game {
     public image: Image,
     public images: Image[],
     public publishers: Publisher[],
-    public reviews: Review[]) {
+    public reviews: Review[],) {
   }
 
   getReleaseDate(): string {

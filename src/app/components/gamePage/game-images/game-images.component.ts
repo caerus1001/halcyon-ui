@@ -2,6 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Game} from '../../../models/game';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Image} from '../../../models/image';
+import {MatDialog} from '@angular/material';
+import {PresentedImageComponent} from '../presented-image/presented-image.component';
 
 @Component({
   selector: 'app-game-images',
@@ -10,10 +12,11 @@ import {Image} from '../../../models/image';
   animations: [
     trigger('gameImageExpansionAnimation', [
       state('small', style({
-        width: '50vw'
+        width: 'calc(100vw/8)'
       })),
       state('large', style({
-        width: '90vw',
+        width: '80vw',
+        height: '650px'
       })),
       transition('small => large', animate('300ms ease-in')),
       transition('large => small', animate('300ms ease-out')),
@@ -26,10 +29,12 @@ export class GameImagesComponent implements OnInit {
   state: string = 'small';
   imageIndex: number = 0;
 
-  constructor() { }
+  constructor(
+    public dialog: MatDialog
+  ) { }
 
-  animateMe(): void {
-    this.state = (this.state === 'small' ? 'large' : 'small');
+  animateMe(image: Image): void {
+    image.state = (image.state === 'small' || image.state == null) ? 'large' : 'small';
   }
 
   getImage(): Image {
@@ -62,6 +67,14 @@ export class GameImagesComponent implements OnInit {
         return 'false';
       }
     }
+  }
+
+  openDialog(image: Image): void {
+    this.dialog.open(PresentedImageComponent, {
+      width: '550px',
+      data: {image: image},
+      panelClass: 'custom-presented-image-mat-dialog'
+    });
   }
 
   ngOnInit() {

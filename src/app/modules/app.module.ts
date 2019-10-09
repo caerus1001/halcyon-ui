@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 import { GameTabGroupComponent } from '../components/gamePage/game-tab-group/game-tab-group.component';
 import { GameIntroductionComponent } from '../components/gamePage/game-introduction/game-introduction.component';
 import { GameImagesComponent } from '../components/gamePage/game-images/game-images.component';
+import { PresentedImageComponent } from '../components/gamePage/presented-image/presented-image.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,7 @@ import { GameImagesComponent } from '../components/gamePage/game-images/game-ima
     LoggerModule.forRoot({serverLoggingUrl: 'api/logs', level: NgxLoggerLevel.DEBUG}),
     FormsModule
   ],
-  entryComponents: [GamesByPlatformComponent, QuickScoreModalComponent],
+  entryComponents: [GamesByPlatformComponent, QuickScoreModalComponent, PresentedImageComponent],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -47,7 +48,8 @@ import { GameImagesComponent } from '../components/gamePage/game-images/game-ima
     SignupComponent,
     GameTabGroupComponent,
     GameIntroductionComponent,
-    GameImagesComponent
+    GameImagesComponent,
+    PresentedImageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
